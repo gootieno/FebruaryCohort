@@ -1,4 +1,46 @@
 /* Your code here */
+#page-title  {
+    font-weight:bold;
+}
+
+.pagenum{
+    position: absolute;
+    right: 10px;
+    font-size: small;
+}
+
+p {
+    text-align: justify;
+    /* margin-top: .75em;
+    margin-bottom: .75em; */
+    margin: .75em 0 .75em 0;
+}
+
+pre {
+    width: fit-content;
+    margin: 100px auto;
+    /* border: 2px solid red; */
+    /* text-align: center; */
+}
+
+a {
+    text-decoration: none;
+}
+
+.td2 > a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+pre > a {
+    color: black;
+    font-weight:bold;
+}
+
+pre> a:hover {
+    text-decoration: underline;
+}
+
 
 /* ===== DO NOT EDIT BELOW THIS COMMENT ===== */
 
