@@ -23,3 +23,12 @@ h1 {
     margin: 150px;
 }
 
+div.second-div-class.third-class.another-class {
+    margin-top: 20px;
+    text-align: center;
+}
+
+div {
+    color:  blue;
+}
+
