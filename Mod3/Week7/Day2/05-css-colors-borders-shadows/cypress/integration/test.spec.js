@@ -52,7 +52,7 @@ describe("CSS for Colors, Borders, and Shadows", function () {
         it("Box 5 has the specified box shadow", function () {
             cy.get(".box5")
                 .should("have.css", "border", "0px none rgb(0, 0, 0)")
-                .should("have.css", "box-shadow", "rgb(0, 128, 128) 8px 2px 15px 0px");
+                .should("have.css", "box-shadow", "rgb(0, 128, 128) 2px 8px 15px 0px");
         });
 
         it("Box 6 has the specified box shadow", function () {
