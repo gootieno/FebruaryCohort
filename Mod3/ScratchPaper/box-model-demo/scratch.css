@@ -1,0 +1,27 @@
+body {
+    margin: 0px;
+}
+
+.box{
+    border: 2px dashed red;
+    height: 300px;
+    /* margin-bottom: 20px; */
+    margin: 3%;
+}
+
+
+#span-container {
+    margin: 20px;
+    border: 2px solid green;
+}
+.box-span {
+    margin: 20px;
+    border: 2px solid blue;
+    height: 300px;
+    display: inline-block;
+    font-size: 40px;
+}
+
+.box-span:hover {
+    border: 5px  solid  red;
+}
