@@ -21,6 +21,7 @@ html, body, div {
     "footer footer footer";
     /* Bonus Phase */
     /* Your code here */
+    gap: 15px 0;
 }
 .item-1 {
     background-color: #87a7b3; /* steel blue */
@@ -57,6 +58,7 @@ html, body, div {
 
     /* Bonus Phase */
     /* Your code here */
+    width: 100px;
 }
 
 /* ====== */

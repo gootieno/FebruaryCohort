@@ -95,3 +95,16 @@ header {
 /* Phase 2 */
 
 /* Your code here */
+
+/* ===== Example ===== */
+@media screen and (min-width: 500px) and (max-width:1000px){
+    header{
+        border: 2px solid red;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    header > h1 {
+        color:  blue;
+    }
+}
