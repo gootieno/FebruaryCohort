@@ -28,7 +28,7 @@ describe("Media Queries", function () {
         });
 
         it("Narrow (already implemented)", function () {
-            cy.viewport(850, 1000)
+            cy.viewport(820, 1000)
                 .get(".page")
                     .should("have.css", "flex-direction", "column")
                 .get(".content")
@@ -39,7 +39,7 @@ describe("Media Queries", function () {
         });
 
         it("Moderate", function () {
-            cy.viewport(851, 1000)
+            cy.viewport(821, 1000)
                 .get(".page")
                     .should("have.css", "flex-direction", "column")
                 .get(".content")
@@ -69,7 +69,7 @@ describe("Media Queries", function () {
         });
 
         it("CHALLENGE: Layout variations were made without changing default sidebar layout", function () {
-            cy.viewport(851, 1000)
+            cy.viewport(821, 1000)
                 .get(".sidebar")
                     .should("have.css", "flex-direction", "row")
                     .should("have.css", "justify-content", "center")
