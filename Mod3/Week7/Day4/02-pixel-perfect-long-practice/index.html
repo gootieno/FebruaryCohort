@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+    <title>Temu Medium</title>
+</head>
+<!-- 'fb129da69bbafd9c6d626af8e269f95c60a4679cd3b04b083b8768193ac65a1ae6f39572e82efcdcf789da6b2e6bd4b88556c07c4af7572bfb8a874bcbc64207' -->
+<body>
+   <header id="header-container">
+        <div id="logo-container">
+            <img src="icon.svg" alt="site logo" class="logo">
+            <span class="logo">TemuMedium</span>
+        </div>
+        <nav id="navlinks-container">
+                <a href="#" class="navlinks">Our story</a>
+                <a href="#" class="navlinks">Membership</a>
+                <a href="#" class="navlinks">Write</a>
+                <a href="#" class="navlinks">Sign in</a>
+                <a href="#" class="navlinks navbutton">Get started</a>
+            </ul>
+        </nav>
+   </header>
+
+   <main id="main-container">
+        <section id="reading-container">
+            <h1 id="reading-heading" class="reading-text">Human stories and ideas</h1>
+            <p class="reading-text">
+                Discover perspectives that deepen understanding. 
+                Share insights on a simple, beautiful, collaborative writing platform.
+            </p>
+            <a href="#" class="navbutton readinglink">Start reading</a>
+        </section>
+        <div id="mm-container">
+            <!-- do javascript -->
+        </div>
+    </main>
+    <script>
+        const mContainer = document.getElementById('mm-container');  //[]
+        console.log(mContainer)
+        for(let i = 0; i < 750; i++){
+            const span = document.createElement('span')
+            span.setAttribute('class', 'm')
+            span.innerText = "M"
+            mContainer.append(span)
+        }
+    </script>
+</body>
+</html>

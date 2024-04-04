@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "Noto Sans", sans-serif;
+}
+
+:root {
+    --app-yellow:#FBC017;
+    --app-red: red;
+    --custom-border: 1px solid black;
+}
+
+#header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 45px;
+    border-bottom: var(--custom-border);
+    background-color: var(--app-yellow);
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+}
+
+span.logo {
+    font-size: 25px;
+}
+
+#navlinks-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navlinks {
+    text-decoration: none;
+    color: black;
+}
+
+.navbutton {
+    color: white;
+    background-color: black;
+    padding: 10px 15px;
+    border-radius: 35px;
+}
+
+#main-container {
+    display: flex;
+    padding-left: 50px;
+    gap: 5px;
+    height: 400px;
+    border-bottom: var(--custom-border);
+    background-color: var(--app-yellow);
+    align-items: center;
+}
+
+#reading-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+    padding-top: 25px;
+    align-self: center;
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+
+#reading-heading {
+    font-size: 5.5rem;
+    font-family: "Roboto Serif", serif;
+    font-weight: 300;
+    line-height: 80px;
+    letter-spacing: 2px;
+}
+
+p.reading-text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.readinglink {
+    width: fit-content;
+    padding-left: 55px;
+    padding-right:55px;
+    text-decoration: none;
+}
+
+#mm-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 20%;
+    flex-grow:1;
+    /* height: 100px; */
+}
+
