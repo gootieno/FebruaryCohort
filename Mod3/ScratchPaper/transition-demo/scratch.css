@@ -1,0 +1,51 @@
+body {
+    margin:0;
+}
+
+body > div {
+    border: 2px solid red;
+    display: inline-flex;
+}
+
+#box-1 {
+    height: 200px;
+    width: 200px;
+    background-color: purple;
+    box-shadow: 0px 0px 8px black;
+    margin: 50px;
+    cursor: pointer;
+    transition: height 2s ease, width 0.5s ease, background-color 1s ease 2s;
+}
+
+#box-1:hover {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(0, 114, 114);
+}
+
+#box-2 {
+    height: 200px;
+    width: 200px;
+    background-color: purple;
+    box-shadow: 0px 0px 8px black;
+    margin: 50px;
+    cursor: pointer;
+    transition: background-color 2s ease;
+    animation: spin 2s ease 2;
+}
+
+#box-2:hover  {
+    background-color: red;
+}
+
+@keyframes spin {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+        height: 50px;
+        width: 30px    
+    }
+}
