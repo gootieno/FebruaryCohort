@@ -39,12 +39,57 @@
     <script>
         const mContainer = document.getElementById('mm-container');  //[]
         console.log(mContainer)
-        for(let i = 0; i < 750; i++){
+        for(let i = 0; i < 600; i++){
             const span = document.createElement('span')
             span.setAttribute('class', 'm')
             span.innerText = "M"
             mContainer.append(span)
         }
+
+        const vanishElements = () => {
+            const spans = document.getElementsByClassName('m');
+
+            const animationFunctions = ["linear","ease-in", "ease-in-out", "ease-out"]
+            
+            for(let i = 0; i < spans.length; i+=5){
+                const [randomIndex, randomDuration] = getRandomValues(spans)
+                const span = spans[randomIndex]
+
+                const keyFrameEffects = [
+                    {color: 'transparent'}, 
+                    {color:'black'}
+                ]
+
+               const {animationFunctionIndex, animationFunction,animationDelay} = getRandomAnimationValues()
+
+                console.log('animation function ', animationFunction)
+                const animationOptions = {
+                    duration: randomDuration, 
+                    easing: animationFunction,
+                    delay: animationDelay,
+                    iterations: Infinity
+                }
+
+                span.animate(keyFrameEffects, animationOptions)   
+            }
+        }
+
+        const getRandomAnimationValues = () => {
+            const animationFunctions = ["linear","ease-in", "ease-in-out", "ease-out"]
+
+            const animationFunctionIndex = Math.floor(Math.random() * (animationFunctions.length -1))
+            const animationFunction = animationFunctions[animationFunctionIndex]
+            const animationDelay = Math.floor(Math.random() * 400) + 1000;
+
+            return {animationFunctionIndex,  animationFunction, animationDelay}
+        }
+       
+        const getRandomValues = (spans) =>  {
+            const randomIndex = Math.floor(Math.random() * spans.length)
+            const randomDuration = Math.floor(Math.random()* 2000) + 1000;
+            return [randomIndex, randomDuration]
+        }
+        vanishElements()
     </script>
 </body>
 </html>
