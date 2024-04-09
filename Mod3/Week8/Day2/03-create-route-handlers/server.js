@@ -11,31 +11,40 @@ function getNewDogId() {
 const server = http.createServer((req, res) => {
   console.log(`${req.method} ${req.url}`);
 
-  let reqBody = "";
+  let reqBody = ""; //query=mars+rover%21&commit=Search
   req.on("data", (data) => {
     reqBody += data;
   });
 
   // When the request is finished processing the entire body
-  req.on("end", () => {
+
+  req.on("end", () => { 
     // Parsing the body of the request
-    if (reqBody) {
+    // x-www-form-urlencoded
+    if (reqBody) { //query=mars+rover%21&commit=Search
       req.body = reqBody
-        .split("&")
-        .map((keyValuePair) => keyValuePair.split("="))
-        .map(([key, value]) => [key, value.replace(/\+/g, " ")])
-        .map(([key, value]) => [key, decodeURIComponent(value)])
+        .split("&") //[query=mars+rover%21,commit=Search]
+        .map((keyValuePair) => keyValuePair.split("=")) //[[query,mars+rover%21],[commit,Search]]
+        .map(([key, value]) => [key, value.replace(/\+/g, " ")]) // [[query,mars rover%21],[commit,Search]]
+        .map(([key, value]) => [key, decodeURIComponent(value)]) // [[query,mars rover!],[commit,Search]]
         .reduce((acc, [key, value]) => {
           acc[key] = value;
           return acc;
         }, {});
+        /*
+          {
+            query: mars rover!,
+            commit: Search
+          }
+
+        */
       console.log(req.body);
     }
     // Do not edit above this line
 
     // define route handlers here
 
-    
+
 
     // Do not edit below this line
     // Return a 404 response when there is no matching route handler
