@@ -1,6 +1,9 @@
 const http = require("http");
 const fs = require('fs');
 
+const Cat = require("./cat");
+const Dog = require("./dog");
+
 function getContentType(fileName) {
   const ext = fileName.split(".")[1];
   switch (ext) {
@@ -16,8 +19,6 @@ function getContentType(fileName) {
   }
 }
 
-const Cat = require("./cat");
-const Dog = require("./dog");
 
 let cat;
 let dog;
@@ -44,6 +45,8 @@ const server = http.createServer((req, res) => {
   if (req.method === "GET" && req.url === "/") {
     console.log('Created cat and dog info:', { cat, dog });
     let htmlPage = fs.readFileSync("./views/index.html", 'utf-8');
+
+    // condition to check ? true : false
     const resBody = htmlPage
       .replace(/#{cat}/g, cat ? `
         <div>
@@ -63,6 +66,7 @@ const server = http.createServer((req, res) => {
           <div>Description: ${dog.description}</div>
         </div>
       ` : "<div>No dog created yet!</div>");
+
     res.statusCode = 200;
     res.setHeader("Content-Type", "text/html");
     res.end(resBody);
@@ -107,6 +111,16 @@ const server = http.createServer((req, res) => {
     }
 
     // Your code here
+    if(req.method === 'POST' && req.url === '/cat'){
+      // do something
+      cat = new Cat()
+
+      // set status code 
+
+      // set headers  
+
+      // end res
+    }
 
     res.statusCode = 404;
     res.end("Page Not Found");
